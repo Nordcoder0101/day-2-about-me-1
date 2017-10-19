@@ -62,3 +62,22 @@ else if (animals.toLowerCase() === 'n' || animals.toLowerCase() === 'no') {
 else {
   alert('Ummmm... What is that? He loves amimals.');
 }
+
+var kids = prompt('How many kids, if any, does Ken have?');
+console.log('How many kids', kids);
+
+var counter = 1;
+
+while (kids !== 1) {
+  kids = parseInt(prompt('How many kids, if any, does Ken have?'));
+
+  if (kids < 1) {
+    alert('Nope. He has at least one kiddo.');
+  } else if (kids > 1) {
+    alert('Sorry. You think too many.');
+  } else if (kids === NaN || kids === num) {
+    alert('Please enter a number.');
+    counter++;
+  }
+}
+console.log('counter:', counter);

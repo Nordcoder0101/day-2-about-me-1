@@ -1,6 +1,9 @@
 /* app styles */
+*{
+  font-family: sans-serif;
+}
 header {
-  background: #444;
+  background: #777;
   color: #fff;
   padding: 20px;
 }
