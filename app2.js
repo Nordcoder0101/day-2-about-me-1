@@ -1,14 +1,43 @@
 'use strict';
 
+
+var promptQuestions = ['Is Ken from Seattle?', 'Does Ken come from a background in coding?', 'Does Ken love food?', 'Are Ken\'s favorite seasons spring and summer?', 'Does Ken like animals?'];
+
+var promptAnswer = [];
+
+var correctAnswer = ['y' || 'yes', 'n' || 'no', 'y' || 'yes', 'n' || 'no', 'y' || 'yes'];
+var incorrectAnswer = ['n' || 'no', 'y' || 'yes', 'n' || 'no', 'y' || 'yes', 'n' || 'no'];
+
+var ifCorrect = ['You are correct! He is from Montana.', 'You are right. He is in fitness.', 'You are right. He LOVES food!.', 'You are correct. Fall and winter are his favorite.', 'You are correct. Animals are awesome!', ]
+
+var ifIncorrect = ['Incorrect. He is not. He is from Montana.', 'Nope. He is in fitness.', 'You could not be more wrong. He LOVES food!', 'Nope. He love fall and winter.', 'You are incorrect. He loves animals.'];
+
+var badAnswer = 'That\'s not an appropriate response';
+
+var askQuestions = function() {
+  for (var i = 0; i < promptQuestions.length; i++) {
+    promptAnswer[i] = prompt(promptQuestions[i]);
+      if (promptAnswer[i] === correctAnswer[i].toLowerCase) {
+      alert(ifCorrect[i]);
+    } else if (promptAnswer[i] === incorrectAnswer[i].toLowerCase){
+      alert(ifIncorrect[i]);
+    } else {
+      alert(badAnswer);
+    }
+  };
+askQuestions();
+/*
 var seattle = prompt('Is Ken from Seattle?');
 console.log('ken is not from seattle:', seattle);
 
+var seattleQuestion = function() {
 if (seattle.toLowerCase() === 'y' || seattle.toLowerCase() === 'yes') {
   alert('Incorrect. He is not. He is from Montana.');
 } else if (seattle.toLowerCase() === 'n' || seattle.toLowerCase() === 'no') {
-  alert('You are correct! He is from Montana.');
+  alert();
 } else {
   alert('Huh?? Where is that? He is from Montana.');
+  }
 }
 
 var coding = prompt('Does Ken come from a background in coding?');
@@ -28,20 +57,20 @@ var food = prompt('Does Ken love food?');
 console.log('ken loves food', food);
 
 if (food.toLowerCase() === 'y' || food.toLowerCase() === 'yes') {
-  alert('You are right. He LOVES food!.');
+  alert();
 }
 else if (food.toLowerCase() === 'n' || food.toLowerCase() === 'no') {
-  alert('You could not be more wrong. He LOVES food!');
+  alert();
 }
 else {
   alert('Ummmm... He LOVES food.');
 }
 
-var seasons = prompt('Are Ken\'s favorite seasons spring and summer?');
+var seasons = prompt();
 console.log('ken\'s favorite seasons', seasons);
 
 if (seasons.toLowerCase() === 'n' || seasons.toLowerCase() === 'no') {
-  alert('You are correct. Fall and winter are.');
+  alert('');
 }
 else if (seasons.toLowerCase() === 'y' || seasons.toLowerCase() === 'yes') {
   alert('Nope. He love fall and winter.');
@@ -50,7 +79,7 @@ else {
   alert('Ummmm... What is that? Fall and winter are the best.');
 }
 
-var animals = prompt('Does Ken like animals?');
+var animals = prompt();
 console.log('Does ken like animals', animals);
 
 if (animals.toLowerCase() === 'y' || animals.toLowerCase() === 'yes') {
@@ -80,4 +109,4 @@ while (kids !== 1) {
     counter++;
   }
 }
-console.log('counter:', counter);
+console.log('counter:', counter); */
